@@ -1,0 +1,23 @@
+using System.Collections;
+using System.Collections.Generic;
+using UnityEngine;
+using UnityEngine.UI;
+using UnityEngine.SceneManagement;
+
+public class WinManager : MonoBehaviour
+{
+    [SerializeField] private Button changeSize;
+    [SerializeField] private GameObject settings;
+
+    private void Start()
+    {
+        changeSize.onClick.AddListener(ChangeSize);
+    }
+
+    private void ChangeSize()
+    {
+        SceneManager.LoadScene(1);
+    }
+
+
+}
